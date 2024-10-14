@@ -31,8 +31,8 @@
                 "text": "External API"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -46,9 +46,27 @@
               "description": "System that interacts with the mobile application in order to send and receive data",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "b3d2d26d-7601-457e-ab68-c4c938d8ca36",
+                  "title": "API Spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker could impersonate the External API, tricking the mobile app into sending sensitive data to a malicious acto",
+                  "mitigation": "Implement mutual authentication between the mobile app and the API using strong encryption methods",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "High"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -140,8 +158,8 @@
                 "text": "Vehicle Tracking Devices"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -155,12 +173,34 @@
               "description": "Real-time tracking systems that provide location and performance data to the data center for processing later on",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "9b100200-8f88-4096-be29-9d95e059c4b3",
+                  "title": "Spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker could impersonate a vehicle tracking device, sending fake location data to the data center",
+                  "mitigation": "Use strong authentication for vehicle tracking devices",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "High"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -177,11 +217,13 @@
                 "text": "Data Center"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -195,13 +237,33 @@
               "description": "The system which processes all the data from navigation data, driver feedback, weather data and  behicle performance data",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "4d9ee706-92a1-4006-9f6b-413944a6a6c9",
+                  "title": "Overload",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "A DDoS attack could overwhelm the data center, disrupting critical services like real-time tracking and telemetry analysis",
+                  "mitigation": " Deploy DDoS mitigation services and load balancers to distribute traffic across multiple servers",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "Critical"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
             }
           },
           {
@@ -255,8 +317,8 @@
                 "text": "Background Worker"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -270,56 +332,35 @@
               "description": "Handles asynchronous tasks such as updates, maintenance breaks or background data processing",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
+              "threats": [
+                {
+                  "id": "c3ec2b26-deb6-403c-aef6-4fff910d0681",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "An attacker could exploit vulnerabilities in the background worker process to gain unauthorised access to critical system functions",
+                  "mitigation": "Implement role-based access control and monitor all access to privileged functions",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": "High"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
               }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Denial of Service",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "80fa20f2-af83-48e4-8295-1e001ae1eb25",
-            "source": {
-              "x": 396,
-              "y": 141
-            },
-            "target": {
-              "cell": "9e9bd4aa-5953-4a7d-841d-86dfd8e62693"
-            },
-            "labels": [
-              "Denial of Service"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -450,234 +491,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Telemetry Data",
-              "description": "Mobile application sends telemetry data to the data center for analysis",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "e0ebe346-ab25-4ade-9593-a7122091d844",
-            "source": {
-              "x": 318,
-              "y": 283
-            },
-            "target": {
-              "cell": "a61384fb-42b8-47b9-9d8b-137adbd03a7c"
-            },
-            "vertices": [
-              {
-                "x": 318,
-                "y": 80
-              }
-            ],
-            "labels": [
-              "Telemetry Data"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "API Request",
-              "description": "The communication between the mobile application and the external API for retrieval of data",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "b621d77a-bbaa-4cd2-a18a-cb191c1c7b78",
-            "source": {
-              "x": 180,
-              "y": 180
-            },
-            "target": {
-              "cell": "9e9bd4aa-5953-4a7d-841d-86dfd8e62693"
-            },
-            "vertices": [
-              {
-                "x": 290,
-                "y": 290
-              }
-            ],
-            "labels": [
-              "API Request"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Real-Time Data",
-              "description": "Live data from the systems are sent to the data center for analysis",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "274240db-3aae-4219-aef3-461ec276143d",
-            "source": {
-              "cell": "4c83376b-706d-41f2-82cf-c7ca449e7e35"
-            },
-            "target": {
-              "x": 800,
-              "y": 110
-            },
-            "vertices": [],
-            "labels": [
-              "Real-Time Data"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Tampering",
-              "description": "Cyber threasts attempting to modify or corrupt data",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "da81935d-aa71-4a55-82b9-c690045720b5",
-            "source": {
-              "x": 448.5,
-              "y": 170
-            },
-            "target": {
-              "cell": "a6df67d6-b3fd-46bd-acc5-a2a5d8c2b932"
-            },
-            "labels": [
-              "Data Tampering"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Malware Injection",
-              "description": "Attempts from attackers to inject malware into the devices to disrupt the real-time retrieval of data",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "4b188b55-bed9-4e6b-923f-1256466c2d27",
-            "source": {
-              "x": 513,
-              "y": 141
-            },
-            "target": {
-              "cell": "4c83376b-706d-41f2-82cf-c7ca449e7e35"
-            },
-            "labels": [
-              "Malware Injection"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Weather Update",
               "description": "Retrieval of data related to weather to use for route planning",
               "outOfScope": false,
@@ -704,54 +517,6 @@
                 "x": 1060,
                 "y": 290
               }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Feedback Retrieval",
-              "description": "Feedback collected from registered drivers in order to improve the system and application",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "76c1bb50-56ca-4eb8-b3dc-c27f855faabb",
-            "source": {
-              "cell": "1b9841e9-2e6d-4f58-9a88-ea83d0ff435d"
-            },
-            "target": {
-              "cell": "a61384fb-42b8-47b9-9d8b-137adbd03a7c"
-            },
-            "vertices": [
-              {
-                "x": 950,
-                "y": 100
-              }
-            ],
-            "labels": [
-              "Feedback Retrieval"
             ]
           },
           {
@@ -804,6 +569,483 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Denial of Service",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "770ba2a2-51e3-44cf-822a-95b536347475",
+                  "title": "Denial of Service",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Attackers could flood the mobile app with requests, rendering the service unavailable for legitimate users",
+                  "mitigation": "Implement rate limiting, monitoring, and filtering to detect and block suspicious activity",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "High"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
+            },
+            "id": "80fa20f2-af83-48e4-8295-1e001ae1eb25",
+            "source": {
+              "x": 396,
+              "y": 141
+            },
+            "target": {
+              "cell": "9e9bd4aa-5953-4a7d-841d-86dfd8e62693"
+            },
+            "labels": [
+              "Denial of Service"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Telemetry Data",
+              "description": "Mobile application sends telemetry data to the data center for analysis",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "63eb78fa-f01e-4634-8643-fcdb13660325",
+                  "title": "Data Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "An attacker may modify telemetry data in transit between the mobile app and data center, leading to inaccurate diagnostics or tracking",
+                  "mitigation": "Ensure end-to-end encryption and integrity checks on telemetry data in transit",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "High"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "id": "e0ebe346-ab25-4ade-9593-a7122091d844",
+            "source": {
+              "cell": "9e9bd4aa-5953-4a7d-841d-86dfd8e62693"
+            },
+            "target": {
+              "cell": "a61384fb-42b8-47b9-9d8b-137adbd03a7c"
+            },
+            "vertices": [
+              {
+                "x": 318,
+                "y": 80
+              }
+            ],
+            "labels": [
+              "Telemetry Data"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Malware Injection",
+              "description": "Attempts from attackers to inject malware into the devices to disrupt the real-time retrieval of data",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d4862737-8222-43e2-8ce2-91fd3a460206",
+                  "title": "Cyber threat attacks",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Cyber threat actors could inject malware into the vehicle tracking devices, disrupting the accuracy of real-time data and tracking",
+                  "mitigation": "Implement security controls such as application whitelisting and regular software patching on vehicle tracking devices",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "High"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "id": "4b188b55-bed9-4e6b-923f-1256466c2d27",
+            "source": {
+              "x": 513,
+              "y": 141
+            },
+            "target": {
+              "cell": "4c83376b-706d-41f2-82cf-c7ca449e7e35"
+            },
+            "labels": [
+              "Malware Injection"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Tampering",
+              "description": "Cyber threasts attempting to modify or corrupt data",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "a87ca873-9557-42fe-8e7c-8b28a66f8b8a",
+                  "title": "Unauthorised Modification",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "An attacker could gain access to the vehicle performance data store and tamper with critical vehicle performance metrics, leading to misleading diagnostics or recommendations",
+                  "mitigation": "Implement strict access control and regular integrity checks on the data store and log all access attempts",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "High"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "id": "da81935d-aa71-4a55-82b9-c690045720b5",
+            "source": {
+              "x": 448.5,
+              "y": 170
+            },
+            "target": {
+              "cell": "a6df67d6-b3fd-46bd-acc5-a2a5d8c2b932"
+            },
+            "labels": [
+              "Data Tampering"
+            ],
+            "vertices": [
+              {
+                "x": 570,
+                "y": 380
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Feedback Retrieval",
+              "description": "Feedback collected from registered drivers in order to improve the system and application",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "62643ce8-7042-4977-ae54-4ff795e1ca1f",
+                  "title": "Modification of Feedback",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Tampering",
+                  "description": "Malicious actors could modify driver feedback data",
+                  "mitigation": "Enforce access control on feedback data and have integrity checks to ensure data has not been altered",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": "Low"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "id": "76c1bb50-56ca-4eb8-b3dc-c27f855faabb",
+            "source": {
+              "cell": "1b9841e9-2e6d-4f58-9a88-ea83d0ff435d"
+            },
+            "target": {
+              "cell": "a61384fb-42b8-47b9-9d8b-137adbd03a7c"
+            },
+            "vertices": [
+              {
+                "x": 950,
+                "y": 100
+              }
+            ],
+            "labels": [
+              "Feedback Retrieval"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "API Request",
+              "description": "The communication between the mobile application and the external API for retrieval of data",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "3f7d14d5-5630-48fe-9019-5933c94fe6db",
+                  "title": "API information disclosure",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Sensitive information from API requests may be exposed if proper encryption and security measures are not in place",
+                  "mitigation": "Ensure that all API requests and responses are encrypted",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "Medium"
+                },
+                {
+                  "id": "48cba7bd-0b62-4910-b090-a21eb8cd80e2",
+                  "title": "API request denial",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Attackers could launch a Denial of Service attack against the API, disrupting communications between the mobile app and external services",
+                  "mitigation": "Use rate limiting, API gateway protection, and monitoring to detect and block abnormal traffic",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
+            },
+            "id": "b621d77a-bbaa-4cd2-a18a-cb191c1c7b78",
+            "source": {
+              "x": 180,
+              "y": 180
+            },
+            "target": {
+              "cell": "9e9bd4aa-5953-4a7d-841d-86dfd8e62693"
+            },
+            "vertices": [
+              {
+                "x": 290,
+                "y": 290
+              }
+            ],
+            "labels": [
+              "API Request"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Real-Time Data",
+              "description": "Live data from the systems are sent to the data center for analysis",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "047f609c-a3f9-4700-97af-0875f4210edd",
+                  "title": "Data Interception",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Attackers could intercept real-time data from the vehicle tracking devices, potentially exposing sensitive location and vehicle performance information",
+                  "mitigation": "Use strong encryption for all data transmissions from vehicle tracking devices and implement secure key management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "High"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "274240db-3aae-4219-aef3-461ec276143d",
+            "source": {
+              "cell": "4c83376b-706d-41f2-82cf-c7ca449e7e35"
+            },
+            "target": {
+              "x": 800,
+              "y": 110
+            },
+            "vertices": [],
+            "labels": [
+              "Real-Time Data"
+            ]
+          },
+          {
             "position": {
               "x": 934.25,
               "y": 10
@@ -817,11 +1059,13 @@
                 "text": "Navigation Data"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -835,13 +1079,33 @@
               "description": "Provides route and map data in order to enhance route planning and tracking systems",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "28322a6e-7c56-40bf-98ee-09ce50663ba8",
+                  "title": "Breach of data",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Navigation data could be exposed, allowing an attacker to track a vehicle’s movements or exploit routing information",
+                  "mitigation": "Encrypt navigation data both at rest and in transit and ensure data is only shared with authorised users and services",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -899,11 +1163,13 @@
                 "text": "Weather Data"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -917,13 +1183,33 @@
               "description": "Stores real-time  information on the weather which is useful for route planning and safety for users",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "8450d6af-7f49-41b3-8efb-e2ec76a3e76f",
+                  "title": "Weather data tampering",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Tampering",
+                  "description": "Attackers may alter weather data, which could result in unsafe route recommendations or vehicle operations",
+                  "mitigation": "Use encrypted channels to retrieve and update weather data",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "Low"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           }
         ]
@@ -931,6 +1217,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 14
   }
 }
