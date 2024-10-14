@@ -16,7 +16,917 @@
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.2.0",
-        "cells": []
+        "cells": [
+          {
+            "position": {
+              "x": 113.75,
+              "y": 120
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "External API"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "25f8fc79-55d3-4918-b5bd-b5c70a26bca1",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Actor",
+              "name": "External API",
+              "description": "System that interacts with the mobile application in order to send and receive data",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 400,
+              "y": 110
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Cyber Threat"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "80f0aeba-ad04-441e-bb7f-c6fe73703de2",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Cyber Threat",
+              "description": "Attackers trying to exploit the vulnerabilities of the system.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 512.5,
+              "y": 403
+            },
+            "size": {
+              "width": 160,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Vehicle Performance Data"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "a6df67d6-b3fd-46bd-acc5-a2a5d8c2b932",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Store",
+              "name": "Vehicle Performance Data",
+              "description": "Stores a handful of relevant information which is used by the system to provide information for the user",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 384.25,
+              "y": 170
+            },
+            "size": {
+              "width": 670,
+              "height": 160
+            },
+            "attrs": {
+              "text": {
+                "text": "Vehicle Tracking Devices"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "4c83376b-706d-41f2-82cf-c7ca449e7e35",
+            "zIndex": 4,
+            "data": {
+              "type": "tm.Process",
+              "name": "Vehicle Tracking Devices",
+              "description": "Real-time tracking systems that provide location and performance data to the data center for processing later on",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 738,
+              "y": 50
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Data Center"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "a61384fb-42b8-47b9-9d8b-137adbd03a7c",
+            "zIndex": 5,
+            "data": {
+              "type": "tm.Store",
+              "name": "Data Center",
+              "description": "The system which processes all the data from navigation data, driver feedback, weather data and  behicle performance data",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 284.25,
+              "y": 283
+            },
+            "size": {
+              "width": 100,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "Mobile app"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "9e9bd4aa-5953-4a7d-841d-86dfd8e62693",
+            "zIndex": 6,
+            "data": {
+              "type": "tm.Process",
+              "name": "Mobile app",
+              "description": "The application which communicates with the external API in order to gather data and respon with appropiate information for the user",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 127.99999999999864,
+              "y": 330
+            },
+            "size": {
+              "width": 140,
+              "height": 250
+            },
+            "attrs": {
+              "text": {
+                "text": "Background Worker"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "ce14cc74-0041-4890-ac0b-79e091b20903",
+            "zIndex": 7,
+            "data": {
+              "type": "tm.Process",
+              "name": "Background Worker",
+              "description": "Handles asynchronous tasks such as updates, maintenance breaks or background data processing",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Denial of Service",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "80fa20f2-af83-48e4-8295-1e001ae1eb25",
+            "source": {
+              "x": 396,
+              "y": 141
+            },
+            "target": {
+              "cell": "9e9bd4aa-5953-4a7d-841d-86dfd8e62693"
+            },
+            "labels": [
+              "Denial of Service"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Processed Data",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "1ddb9f5c-40da-45f4-9e9e-343d9442ceec",
+            "source": {
+              "x": 589,
+              "y": 463
+            },
+            "target": {
+              "cell": "9e9bd4aa-5953-4a7d-841d-86dfd8e62693"
+            },
+            "vertices": [
+              {
+                "x": 500,
+                "y": 550
+              },
+              {
+                "x": 470,
+                "y": 400
+              }
+            ],
+            "labels": [
+              "Processed Data"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Background Processing Data",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "d7260c20-b549-4521-8d6d-82235b0c7369",
+            "source": {
+              "cell": "ce14cc74-0041-4890-ac0b-79e091b20903"
+            },
+            "target": {
+              "cell": "a61384fb-42b8-47b9-9d8b-137adbd03a7c"
+            },
+            "vertices": [
+              {
+                "x": 750,
+                "y": 640
+              },
+              {
+                "x": 960,
+                "y": 320
+              },
+              {
+                "x": 860,
+                "y": 150
+              }
+            ],
+            "labels": [
+              "Background Processing Data"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Telemetry Data",
+              "description": "Mobile application sends telemetry data to the data center for analysis",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "e0ebe346-ab25-4ade-9593-a7122091d844",
+            "source": {
+              "x": 318,
+              "y": 283
+            },
+            "target": {
+              "cell": "a61384fb-42b8-47b9-9d8b-137adbd03a7c"
+            },
+            "vertices": [
+              {
+                "x": 318,
+                "y": 80
+              }
+            ],
+            "labels": [
+              "Telemetry Data"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "API Request",
+              "description": "The communication between the mobile application and the external API for retrieval of data",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "b621d77a-bbaa-4cd2-a18a-cb191c1c7b78",
+            "source": {
+              "x": 180,
+              "y": 180
+            },
+            "target": {
+              "cell": "9e9bd4aa-5953-4a7d-841d-86dfd8e62693"
+            },
+            "vertices": [
+              {
+                "x": 290,
+                "y": 290
+              }
+            ],
+            "labels": [
+              "API Request"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Real-Time Data",
+              "description": "Live data from the systems are sent to the data center for analysis",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "274240db-3aae-4219-aef3-461ec276143d",
+            "source": {
+              "cell": "4c83376b-706d-41f2-82cf-c7ca449e7e35"
+            },
+            "target": {
+              "x": 800,
+              "y": 110
+            },
+            "vertices": [],
+            "labels": [
+              "Real-Time Data"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Tampering",
+              "description": "Cyber threasts attempting to modify or corrupt data",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "da81935d-aa71-4a55-82b9-c690045720b5",
+            "source": {
+              "x": 448.5,
+              "y": 170
+            },
+            "target": {
+              "cell": "a6df67d6-b3fd-46bd-acc5-a2a5d8c2b932"
+            },
+            "labels": [
+              "Data Tampering"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Malware Injection",
+              "description": "Attempts from attackers to inject malware into the devices to disrupt the real-time retrieval of data",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "4b188b55-bed9-4e6b-923f-1256466c2d27",
+            "source": {
+              "x": 513,
+              "y": 141
+            },
+            "target": {
+              "cell": "4c83376b-706d-41f2-82cf-c7ca449e7e35"
+            },
+            "labels": [
+              "Malware Injection"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Weather Update",
+              "description": "Retrieval of data related to weather to use for route planning",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "82b78e4a-74b1-4f77-96c9-9fcbf172c415",
+            "source": {
+              "cell": "a61384fb-42b8-47b9-9d8b-137adbd03a7c"
+            },
+            "target": {
+              "cell": "98d323fa-b2ed-4aac-9ba4-da50d9ddfe32"
+            },
+            "labels": [
+              "Weather Update"
+            ],
+            "vertices": [
+              {
+                "x": 1060,
+                "y": 290
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Feedback Retrieval",
+              "description": "Feedback collected from registered drivers in order to improve the system and application",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "76c1bb50-56ca-4eb8-b3dc-c27f855faabb",
+            "source": {
+              "cell": "1b9841e9-2e6d-4f58-9a88-ea83d0ff435d"
+            },
+            "target": {
+              "cell": "a61384fb-42b8-47b9-9d8b-137adbd03a7c"
+            },
+            "vertices": [
+              {
+                "x": 950,
+                "y": 100
+              }
+            ],
+            "labels": [
+              "Feedback Retrieval"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Update",
+              "description": "Updates to route and map data between the navigation store to the data center",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "676fe9a7-155b-4cda-a030-6444215456bd",
+            "source": {
+              "x": 788,
+              "y": 50
+            },
+            "target": {
+              "cell": "8cb8cb59-ae1c-48df-8de6-4f1c79471bd5"
+            },
+            "vertices": [
+              {
+                "x": 850,
+                "y": 10
+              }
+            ],
+            "labels": [
+              "Data Update"
+            ]
+          },
+          {
+            "position": {
+              "x": 934.25,
+              "y": 10
+            },
+            "size": {
+              "width": 110,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Navigation Data"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "8cb8cb59-ae1c-48df-8de6-4f1c79471bd5",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Store",
+              "name": "Navigation Data",
+              "description": "Provides route and map data in order to enhance route planning and tracking systems",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1020,
+              "y": 140
+            },
+            "size": {
+              "width": 110,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Driver Feedback"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "1b9841e9-2e6d-4f58-9a88-ea83d0ff435d",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Store",
+              "name": "Driver Feedback",
+              "description": "Contains feedback from drivers registered on the system which is then used to improve the system or fix any issues withing the mobile application",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1068,
+              "y": 298
+            },
+            "size": {
+              "width": 100,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Weather Data"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "98d323fa-b2ed-4aac-9ba4-da50d9ddfe32",
+            "zIndex": 13,
+            "data": {
+              "type": "tm.Store",
+              "name": "Weather Data",
+              "description": "Stores real-time  information on the weather which is useful for route planning and safety for users",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          }
+        ]
       }
     ],
     "diagramTop": 1,
