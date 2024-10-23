@@ -2070,6 +2070,7 @@
             },
             "width": 200,
             "height": 100,
+            "zIndex": 14,
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
@@ -2132,8 +2133,7 @@
                 "x": 954,
                 "y": 384
               }
-            ],
-            "zIndex": 14
+            ]
           },
           {
             "position": {
@@ -2159,6 +2159,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -2242,7 +2243,6 @@
               ]
             },
             "id": "300e7988-9649-4c53-b165-c8319a4af445",
-            "zIndex": 15,
             "data": {
               "type": "tm.Store",
               "name": "Personal Data",
